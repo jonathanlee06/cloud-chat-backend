@@ -1,0 +1,19 @@
+service: chat-backend
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-southeast-1
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY}
+    ANTHROPIC_API_KEY: ${env:ANTHROPIC_API_KEY}
+
+functions:
+  chat:
+    handler: handler.handler
+    events:
+      - httpApi:
+          path: /chat
+          method: POST
+          cors: true
