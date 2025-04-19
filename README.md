@@ -30,4 +30,4 @@ https://abc123.execute-api.ap-southeast-1.amazonaws.com/chat
 
 ## License
 
-MIT
+[MIT](https://github.com/jonathanlee06/cloud-chat-backend/blob/main/LICENSE)
